@@ -151,15 +151,37 @@
     position: absolute;
     width: 404px;
     background-color: var(--while-color);
-    top: 118%;
+    top: 175%;
     right: 0;
     border-radius: 2px;
     cursor: default;
     transform-origin: 90% top;
     animation: headerNotifyGrowth ease-in 0.2s;
+    will-change: opacity, transform;
     display: none;
 }
 
+.header__notify::before {
+    content: "";
+    border-width: 20px 30px;
+    border-style: solid;
+    border-color: transparent transparent var(--while-color) transparent;
+    position: absolute;
+    top: -27px;
+    right: 0;
+}
+
+.header__notify::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: transparent;
+    top: -20px;
+    right: 0;
+    width: 90px;
+    height: 90px;
+
+}
 
 .header__notify-header {
     height: 40px;
